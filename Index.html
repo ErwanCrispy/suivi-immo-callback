@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head><title>Connexion…</title></head>
+<body>
+<p>Connexion en cours, vous pouvez fermer cette fenêtre.</p>
+<script>
+  if(window.opener) {
+    window.opener.postMessage(window.location.href, '*');
+    setTimeout(()=>window.close(), 500);
+  }
+</script>
+</body>
+</html>
